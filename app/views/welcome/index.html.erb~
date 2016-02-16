@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AlphaBlog</title>
+
+</head>
+<body>
+<h1>Welcome here man</h1>
+<%= link_to 'About', welcome_about_path %>
+
+
+</body>
+</html>

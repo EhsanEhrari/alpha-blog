@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AlphaBlog</title>
+
+</head>
+<body>
+<h1>In the name of Allah</h1>
+<%= link_to 'index', root_path %>
+
+
+</body>
+</html>
