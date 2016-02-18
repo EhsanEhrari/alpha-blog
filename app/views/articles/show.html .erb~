@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AlphaBlog</title>
+
+</head>
+<body>
+
+<p>Title: <%= @article.title %></p>
+<p>Descreption: <%= @article.descreption %></p>
+</body>
+</html>
