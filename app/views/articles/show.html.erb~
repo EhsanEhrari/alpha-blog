@@ -6,10 +6,16 @@
 </head>
 <body>
 
-<p>Title: <%= @article.title %></p>
-<p>Descreption: <%= @article.descreption %></p>
-
-<p><%= link_to 'Back to Articles', articles_path(@article) %></p>
-<p><%= link_to 'Edit this Article', articles_path(@article) %></p>
+<h2 align="center">Title: <%= @article.title %></p></h2>
+<div class="well col-xs-8 col-xs-offset-2">
+<h4 class="Center descreption"><strong>Descreption:</strong></h4>
+<hr>
+ <%= simple_format(@article.descreption) %>
+<div class="articles">
+<%= link_to 'View All Articles', articles_path(@article),class:"btn btn-xs btn-success" %>
+<%= link_to 'Edit this Article', edit_article_path(@article),class:"btn btn-xs btn-info" %>
+<%= link_to 'Delete this Article', articles_path(@article),method: :delete, data:{confirm:"Are u sure?"},class:"btn btn-xs btn-danger" %>
+</div>
+</div>
 </body>
 </html>
