@@ -8,12 +8,7 @@
 </head>
 <body>
 
-  <% flash.each do |name,msg| %>
-	<ul>
-
-	</ul>
-  <% end %>
-
+<%= render 'layoutes/messages' %>
 <%= yield %>
 
 </body>
