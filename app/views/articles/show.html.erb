@@ -8,5 +8,8 @@
 
 <p>Title: <%= @article.title %></p>
 <p>Descreption: <%= @article.descreption %></p>
+
+<p><%= link_to 'Back to Articles', articles_path(@article) %></p>
+<p><%= link_to 'Edit this Article', edit_article_path(@article) %></p>
 </body>
 </html>
