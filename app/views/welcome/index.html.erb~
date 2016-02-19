@@ -5,9 +5,12 @@
 
 </head>
 <body>
-<h1>Welcome here man</h1>
+<div class="Center jumbotron">
+  <h1>Alpha Blog</h1>
+  <%= link_to 'Sign Up','#',class:"btn btn-primary btn-lg btn-xlarge" %>
+</div>
 
-<%= link_to 'Alpha-Blog', about_path %>|<%= link_to 'About', about_path %>
+
 
 
 </body>

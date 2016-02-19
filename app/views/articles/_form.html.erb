@@ -6,32 +6,39 @@
 </head>
 <body>
 
-<% if @article.errors.any? %>
-<ul>
-<% @article.errors.full_messages.each do |msg| %>
-<li><%= msg %></li>
-<% end %>
-</ul>
-<% end %>
+<%= render 'shared/errors', obj: @article %>
+<div class="row">
+ <div class="col-xs-12">
+<%= form_for(@article, :html => {class:"form-horizontal",role:"form"}) do |f| %>
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+<%= f.label :title %>
+  </div>
+  <div class="col-sm-8">
+<%=     f.text_field :title, class:"form-control",placeholder:"Title of your article"%>
+  </div>
+  </div>
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+<%=     f.label :descreption %>
+  </div>
+<div class="col-sm-8">
+<%=     f.text_area :descreption, class:"form-control",placeholder:"Descreption of article"%>
+</div>
+</div>
 
-<%= form_for @article do |f| %>
-<p>
-<%= f.label :title 
-%>
-<br>
-<%=     f.text_field :title %>
+<div class="form-group">
+ <div class="col-sm-offset-2 col-sm-8">
+<%=     f.submit class:"btn btn-default"%>
+ </div>
+</div>
+
 </p>
-
-<p>
-<%=     f.label :descreption %><br>
-<%=     f.text_area :descreption %>
-</p>
-
-<p>
-<%=     f.submit %><br>
-
-</p>
 <% end %>
-<p><%= link_to 'Back to Articles', articles_path(@article) %></p>
+ </div>
+  </div>
+<div class="col-xs-4 col-sm-offset-4">
+[ <%= link_to 'Cancel Reques and Return to Articles', articles_path(@article) %> ]
+</div>
 </body>
 </html>

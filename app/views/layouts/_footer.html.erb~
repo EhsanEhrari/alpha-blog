@@ -1,0 +1,13 @@
+<div class="container">
+  <footer> 
+   <small>
+      Copyright &copy; <a href="Udem.com">Udemy</a>
+      By- <a href="#">Ehsan Ehrari</a>
+   </small>
+   <ul>
+     <li>
+	<%= link_to 'About', about_path %>
+     </li>
+   </ul>
+  </footer>
+</div>
